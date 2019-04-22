@@ -83,7 +83,7 @@ gulp.task('combi', function() {
     return gulp.src('index.html')
         .pipe(useref())
         .pipe(gulpIf('*.js', babel()))
-        .pipe(gulpIf('*.js', uglify()))
+        .pipe(gulpIf('*.js', terser()))
         .pipe(gulpIf('*.css', postcss([ autoprefixer() ])))
         .pipe(gulpIf('*.css', cleancss()))
         .pipe(gulp.dest('dist/'))
