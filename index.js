@@ -1,3 +1,4 @@
+//https://github.com/OStefani/uventa
 document.addEventListener('DOMContentLoaded', () => {
     /*var clickEvent = (function() {
         if ('ontouchstart' in document.documentElement === true)
@@ -13,7 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
             listOfChild[item].classList.remove(className);
         });
         el.classList.add(className);
-        callback(index);
+        if(callback) {
+            callback(index);
+        }
+        
     }
     // Modal
     let catalogButtons = document.getElementsByClassName('catalog-menu__click');
